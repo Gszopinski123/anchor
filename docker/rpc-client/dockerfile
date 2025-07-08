@@ -1,0 +1,16 @@
+FROM ubuntu:latest
+
+
+RUN apt-get update && apt-get install -y g++
+WORKDIR /rpc-client
+COPY src/rpc-client-dck .
+COPY third_party .
+RUN mkdir -p build/executables
+RUN g++ \
+	-I_deps/rpclib-src/include \
+	client.cpp \
+	_deps/rpclib-src/build/librpc.a	\
+	-o build/executables/client-dck \
+	-pthread
+
+CMD ["./build/executables/client-dck"]
