@@ -13,4 +13,4 @@ RUN g++ \
 	-o build/executables/client-dck \
 	-pthread
 
-CMD ["./build/executables/client-dck"]
+CMD ["./build/executables/client-dck && sleep infinity"]
