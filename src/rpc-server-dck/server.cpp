@@ -6,8 +6,8 @@ void printPlease(void) {
 }
 
 int main(int argc, char** argv) {
-
-    rpc::server srv(8080);
+    int port = 8080;
+    rpc::server srv(port);
     srv.bind("printPlease",&printPlease);
 
     srv.run();

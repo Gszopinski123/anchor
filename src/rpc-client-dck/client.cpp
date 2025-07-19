@@ -5,9 +5,8 @@
 
 
 int main(int argc, char** argv) {
-    //rpc::client client("host.docker.internal", 8080);
-    //client.call("printPlease");
-    //std::cout << "I think something is happening!" << std::endl;
-    while(1) {;;}
+    rpc::client client("host.minikube.internal", 8080);
+    client.call("printPlease");
+    std::cout << "I think something is happening!" << std::endl;
     return 0;
 }
