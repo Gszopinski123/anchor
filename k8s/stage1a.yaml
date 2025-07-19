@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: redis-rpc-pod
 spec:
+  hostNetwork: true
   containers: 
     - name: redis
       image: gszopinski123/my-redis:redis
@@ -11,5 +12,7 @@ spec:
 
     - name: rpc-client
       image: gszopinski123/rpc-client-dck:client
+      command: ["/bin/bash", "-c"]
+      args: ["echo Hello from rpc-client && sleep 90"]
       ports:
         - containerPort: 8080
