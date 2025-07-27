@@ -1,1 +1,2 @@
 I want my local host to connect to my pod in the cluster specifically my kubernetes pods. I then want this local host to accept rpc commands.
+all functions need to have the return type of void
