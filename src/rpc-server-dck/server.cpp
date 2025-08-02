@@ -1,15 +1,11 @@
 #include <iostream>
-#include "rpc/server.h"
 
-void printPlease(void) {
-    std::cout << "it worked!" << std::endl;
-}
+#include "rrpc.hpp"
 
 int main(int argc, char** argv) {
-    int port = 8080;
-    rpc::server srv(port);
-    srv.bind("printPlease",&printPlease);
-
-    srv.run();
+    rrpc::RrpcServer srv(8080);
+    srv.connect();
+    rrpc::RrpcArgument arg;
+    srv.send("hello_world",arg);
     return 0;
 }
