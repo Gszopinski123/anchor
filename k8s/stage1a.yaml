@@ -9,10 +9,7 @@ spec:
       image: gszopinski123/my-redis:redis
       ports:
         - containerPort: 6379
-
     - name: rpc-client
-      image: gszopinski123/rpc-client-dck:client
-      command: ["/bin/bash", "-c"]
-      args: ["echo Hello from rpc-client && sleep 90"]
+      image: gszopinski123/rpc-server-dck:server
       ports:
         - containerPort: 8080
