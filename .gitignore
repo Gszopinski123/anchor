@@ -9,3 +9,4 @@ cmake_install.cmake
 /third_party/rpclib-src/
 /third_party/rpclib-build/
 rst.sh
+/third_party/kafka_2.13-3.9.1
