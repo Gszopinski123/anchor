@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zk-kafka-svc
+spec:
+  selector:
+    app: zk-kafka
+  ports:
+  - port: 2181
+    targetPort: 2181

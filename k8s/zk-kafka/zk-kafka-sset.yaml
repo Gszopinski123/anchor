@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: zk-kafka-sset
+spec:
+  selector:
+    matchLabels:
+      app: zk-kafka
+  serviceName: "zk-kafka-svc"
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: zk-kafka
+    spec:
+      containers:
+      - name: zk-kafka
+        image: gszopinski123/zk-kafka:zk
+        ports:
+        - containerPort: 2181
