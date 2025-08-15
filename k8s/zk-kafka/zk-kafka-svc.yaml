@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: zk-kafka-svc
 spec:
+  clusterIP: None
   selector:
     app: zk-kafka
   ports:

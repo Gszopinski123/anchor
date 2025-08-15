@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v3
 kind: Pod
 metadata:
   name: redis-rpc-pod
@@ -6,10 +6,10 @@ spec:
   hostNetwork: true
   containers: 
     - name: redis
-      image: gszopinski123/my-redis:redis
+      image: gszopinski124/my-redis:redis
       ports:
-        - containerPort: 6379
+        - containerPort: 6380
     - name: rpc-client
-      image: gszopinski123/rpc-server-dck:server
+      image: gszopinski124/rpc-server-dck:server
       ports:
-        - containerPort: 8080
+        - containerPort: 8081
