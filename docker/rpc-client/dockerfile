@@ -2,6 +2,7 @@ FROM ubuntu:latest
 
 
 RUN apt-get update && apt-get install -y g++
+RUN apt-get install -y librdkafka-dev
 COPY src/rpc-server-dck .
 COPY third_party .
 RUN mkdir -p build/executables

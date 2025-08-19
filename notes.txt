@@ -4,3 +4,5 @@ all functions need to have the return type of void
 
 to root into a pod in k8 -> kubectl exec -it <pod-name> -- /bin/bash
 linux issue with hostname being true
+
+need to setup topics before connecting via hub
